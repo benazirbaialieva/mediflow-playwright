@@ -6,6 +6,7 @@ export class LoginPage{
     readonly email : Locator;
     readonly password : Locator;
     readonly signInButton : Locator;
+    readonly loginError : Locator;
 
     constructor(page : Page) {
         this.page = page;
@@ -13,6 +14,7 @@ export class LoginPage{
         this.email = page.getByPlaceholder('doctor@mediflow.com');
         this.password = page.getByPlaceholder('Enter password');
         this.signInButton = page.getByRole('button', {name: 'Sign In'})
+        this.loginError = page.getByTestId('login-error');
     }
 
 
