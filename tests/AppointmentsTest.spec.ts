@@ -11,7 +11,6 @@ test ('create appontment', async ({ page }) => {
     await page.goto('/appointments');
 
     const appontmentsPage = new AppointmentsPage(page);
-    await appontmentsPage.createAppointmentButton.click();
-    await appontmentsPage.selectRandomPatient();
+    await appontmentsPage.scheduleAppointment();
 
 } )
